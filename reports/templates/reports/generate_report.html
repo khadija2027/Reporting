@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Génération de rapport intelligent</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #f3f6fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+            padding: 30px 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        input, select, button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 25px;
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0055aa;
+        }
+
+        .loading {
+            text-align: center;
+            color: #555;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .results {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .download-btn {
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            margin: 10px 5px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #005fa3;
+        }
+
+        #filters_fields, #extra_fields {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>🧾 Génération de rapport intelligent</h2>
+
+    <form id="reportForm" method="post">
+        {% csrf_token %}
+
+        <label for="report_type">Type de rapport :</label>
+        <select id="report_type" name="report_type" required>
+            <option value="">-- Choisir --</option>
+            <option value="extra-financier">Rapport extra-financier</option>
+            <option value="RSE">Rapport RSE</option>
+        </select>
+
+        <label for="start_period">Période début :</label>
+        <input type="month" id="start_period" name="start" required>
+
+        <label for="end_period">Période fin :</label>
+        <input type="month" id="end_period" name="end" required>
+
+        <!-- Référentiel -->
+        <div id="extra_fields">
+            <label for="referentiel">Référentiel :</label>
+            <select id="referentiel" name="referentiel">
+                <option value="">-- Sélectionner un référentiel --</option>
+                <option value="GRI">GRI</option>
+                <option value="CSRD">CSRD</option>
+                <option value="ODD">ODD</option>
+            </select>
+        </div>
+
+        <!-- Filtres -->
+        <div id="filters_fields">
+            <label for="filters">Indicateurs à inclure :</label>
+            <select id="filters" name="filters">
+                <option value="">-- Sélectionner un indicateur --</option>
+                <option value="énergie">Énergie</option>
+                <option value="eau">Eau</option>
+                <option value="déchets">Déchets</option>
+                <option value="social">Social</option>
+                <option value="production">Production</option>
+            </select>
+        </div>
+
+        <button type="submit">🚀 Générer le rapport</button>
+    </form>
+
+    <div id="loading" class="loading">⏳ Génération en cours, merci de patienter...</div>
+    <div id="results" class="results"></div>
+</div>
+
+<script>
+document.getElementById("report_type").addEventListener("change", function() {
+    const type = this.value;
+    const extraFields = document.getElementById("extra_fields");
+    const filtersFields = document.getElementById("filters_fields");
+
+    if (type === "extra-financier") {
+        extraFields.style.display = "block";
+        filtersFields.style.display = "none";
+    } else if (type === "RSE") {
+        filtersFields.style.display = "block";
+        extraFields.style.display = "none";
+    } else {
+        extraFields.style.display = "none";
+        filtersFields.style.display = "none";
+    }
+});
+
+document.getElementById("reportForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const loading = document.getElementById("loading");
+    const results = document.getElementById("results");
+
+    loading.style.display = "block";
+    results.innerHTML = "";
+
+    const formData = new FormData(form);
+    const response = await fetch("", {
+        method: "POST",
+        body: formData
+    });
+
+    const data = await response.json();
+    loading.style.display = "none";
+
+    if (data.pdf_url) {
+        results.innerHTML = `
+            <h3>✅ Rapport généré avec succès !</h3>
+            <button class="download-btn" onclick="window.open('${data.pdf_url}', '_blank')">📄 Télécharger PDF</button>
+            <button class="download-btn" onclick="window.open('${data.word_url}', '_blank')">📝 Télécharger Word</button>
+            <button class="download-btn" onclick="window.open('${data.txt_url}', '_blank')">📃 Télécharger TXT</button>
+        `;
+    } else {
+        results.innerHTML = "<p style='color:red;'>❌ Erreur lors de la génération du rapport.</p>";
+    }
+});
+</script>
+</body>
+</html>
