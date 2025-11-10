@@ -97,7 +97,7 @@
         <select id="report_type" name="report_type" required>
             <option value="">-- Choisir --</option>
             <option value="extra-financier">Rapport extra-financier</option>
-            <option value="RSE">Rapport RSE</option>
+            <option value="de performance">Rapport de performance</option>
         </select>
 
         <label for="start_period">Période début :</label>
@@ -120,7 +120,7 @@
         <!-- Filtres -->
         <div id="filters_fields">
             <label for="filters">Indicateurs à inclure :</label>
-            <select id="filters" name="filters">
+            <select id="filters" name="filters" multiple size="5">
                 <option value="">-- Sélectionner un indicateur --</option>
                 <option value="énergie">Énergie</option>
                 <option value="eau">Eau</option>
@@ -128,6 +128,7 @@
                 <option value="social">Social</option>
                 <option value="production">Production</option>
             </select>
+            <p style="font-size: 13px; color: #555;">(Maintenez <b>Ctrl</b> ou <b>Cmd</b> pour sélectionner plusieurs filtres)</p>
         </div>
 
         <button type="submit">🚀 Générer le rapport</button>
@@ -146,7 +147,7 @@ document.getElementById("report_type").addEventListener("change", function() {
     if (type === "extra-financier") {
         extraFields.style.display = "block";
         filtersFields.style.display = "none";
-    } else if (type === "RSE") {
+    } else if (type === "de performance") {
         filtersFields.style.display = "block";
         extraFields.style.display = "none";
     } else {

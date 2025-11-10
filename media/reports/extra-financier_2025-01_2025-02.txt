@@ -1,90 +1,90 @@
-Rapport de Performance ExtraFinancière – [Nom de l'Entreprise]
-Période  1er janvier 2025 – 29 février 2025
-Périmètre  Usine de Casablanca
+Rapport de Durabilité ExtraFinancier – Entreprise InnovSolutions SA
+
+Période de reporting  1er janvier 2025 – 29 février 2025
+Périmètre  Site de production de Casablanca
+Référentiel  Corporate Sustainability Reporting Directive (CSRD)
 
 
 
  Résumé exécutif
 
-Ce rapport bimensuel présente la performance extrafinancière de notre usine de Casablanca pour la période de janvier à février 2025, en s'inspirant des standards de la Global Reporting Initiative (GRI). Les résultats de cette période sont particulièrement encourageants. Nous observons une amélioration notable de notre efficacité environnementale  alors que la production a augmenté de 5,7 %, notre consommation d'énergie a diminué de 5,1 % et celle d'eau de 2,9 %. La performance la plus remarquable est la réduction de 33 % de nos déchets générés. Ces progrès témoignent de l'efficacité de nos initiatives opérationnelles. Ce rapport détaille également notre cadre de gouvernance RSE et notre contribution aux Objectifs de Développement Durable (ODD) des Nations Unies, notamment les ODD 6, 7, 8 et 12. Les recommandations formulées visent à consolider ces acquis et à structurer notre collecte de données sociales pour les prochains cycles de reporting.
+Ce premier rapport de durabilité pour la période de janvierfévrier 2025 pour notre site de Casablanca marque une étape clé dans notre démarche de transparence, conformément à la directive CSRD. Les résultats de ces deux mois sont particulièrement encourageants. Malgré une augmentation de la production de près de 6 %, nous observons une diminution de la consommation d'énergie (5 %) et d'eau (3 %), ainsi qu'une réduction spectaculaire des déchets générés (33 %). Ces performances témoignent d'un découplage réussi entre notre croissance et notre impact environnemental, grâce à des initiatives d'efficacité opérationnelle. Ce rapport identifie également les axes de progrès, notamment la formalisation du suivi des indicateurs sociaux et le renforcement de notre gouvernance RSE. Nos actions s'alignent directement avec les ODD 7, 12 et 6, affirmant notre engagement pour une croissance responsable.
 
  Méthodologie
 
-Ce rapport a été élaboré en conformité avec les principes des standards GRI pour garantir la transparence et la comparabilité des informations.
+Ce rapport a été élaboré en s'inspirant des standards européens de reporting de durabilité (ESRS) prévus par la CSRD. L'objectif est de fournir une information transparente et comparable sur nos impacts, risques et opportunités en matière de durabilité.
 
-   Périmètre et Période  Les données couvrent les activités opérationnelles de l'usine de Casablanca pour les mois de janvier et février 2025.
-   Référentiel  La structure s'inspire des standards GRI, notamment 
-       GRI 302 Energy 2016
-       GRI 303 Water and Effluents 2018
-       GRI 306 Waste 2020
-   Sources de données 
-       Énergie et Eau  Relevés mensuels des compteurs principaux de l'usine.
-       Production  Données extraites du système de suivi de la production (ERP).
-       Déchets  Registres de pesée fournis par notre prestataire de gestion des déchets.
+Périmètre et période 
+Les données concernent exclusivement les activités opérationnelles du site de production de Casablanca pour la période du 1er janvier au 29 février 2025.
+
+Sources des données 
+Les indicateurs présentés sont issus de systèmes de suivi internes et vérifiables 
+   Énergie  Relevés mensuels des compteurs électriques principaux du site (en kWh).
+   Eau  Relevés mensuels des compteurs d'eau du réseau public (en m³).
+   Déchets  Registres de pesée des déchets non dangereux collectés par notre prestataire externe (en kg).
+   Production  Données extraites de notre système de gestion de la production (ERP), mesurées en poids total des produits finis (en kg).
 
  Section Environnement
 
-Notre engagement est de dissocier notre croissance de notre impact environnemental. Les indicateurs de l'usine de Casablanca pour cette période montrent une tendance positive vers cet objectif.
+Cette section analyse notre performance environnementale en se concentrant sur les consommations de ressources et la génération de déchets. L'indicateur clé est l'intensité, qui rapporte la consommation ou la génération à l'unité de production (kg).
 
-Indicateurs de performance clés (KPIs)
+Indicateurs de Performance Clés (KPIs) Environnementaux
 
- Indicateur  Janvier 2025  Février 2025  Évolution 
-        
- Production (kg)  26 500  28 000  +5,7 % 
- Consommation d'énergie (kWh)  15 800  15 000  5,1 % 
- Consommation d'eau (m³)  3 500  3 400  2,9 % 
- Déchets générés (kg)  480  320  33,3 % 
+| Indicateur | Unité | Janvier 2025 | Février 2025 | Variation (Absolue) |
+|  |  |  |  |  |
+| Production | kg | 26 500 | 28 000 | +5,7 % |
+| Consommation d'énergie | kWh | 15 800 | 15 000 | 5,1 % |
+| Consommation d'eau | m³ | 3 500 | 3 400 | 2,9 % |
+| Génération de déchets | kg | 480 | 320 | 33,3 % |
+| Intensité Énergétique | kWh/kg produit | 0,596 | 0,536 | 10,1 % |
+| Intensité Eau | m³/kg produit | 0,132 | 0,121 | 8,3 % |
+| Intensité Déchets | kg/kg produit | 0,018 | 0,011 | 38,9 % |
 
-Analyse de la performance
+Analyse de la performance environnementale
 
-L'analyse des ratios d'intensité confirme une amélioration significative de notre efficacité opérationnelle 
+La performance du site de Casablanca sur cette période est excellente. Nous observons un découplage significatif entre la croissance de la production (+5,7 %) et notre empreinte environnementale.
 
-   Intensité énergétique  Passée de 0,60 kWh/kg produit en janvier à 0,54 kWh/kg en février. Cette baisse reflète les bénéfices de nos actions d'optimisation des réglages machine et de maintenance préventive.
-   Intensité hydrique  Réduite de 0,132 m³/kg à 0,121 m³/kg, grâce à une campagne de détection des fuites et de sensibilisation des équipes.
-   Ratio de déchets  La réduction drastique des déchets (de 0,018 kg/kg à 0,011 kg/kg) est le résultat direct d'une nouvelle initiative de tri à la source et d'optimisation des découpes de matière première, minimisant les chutes.
-
-La performance globale est excellente  nous avons produit plus en consommant moins de ressources et en générant significativement moins de déchets.
+1.  Efficacité énergétique  L'intensité énergétique s'est améliorée de plus de 10 %. Cette performance peut être attribuée aux récents programmes de maintenance préventive et à l'optimisation des plannings de production pour éviter les pics de consommation.
+2.  Gestion de l'eau  La réduction de l'intensité de consommation d'eau de 8,3 % suggère que les campagnes de sensibilisation et les vérifications des fuites portent leurs fruits.
+3.  Réduction des déchets  La baisse de près de 40 % de l'intensité des déchets est le résultat le plus marquant. Il est probable que des initiatives d'amélioration des processus aient permis de réduire les rebuts de production à la source.
 
  Section Social
 
-Nous plaçons le bienêtre, la sécurité et le développement de nos collaborateurs au cœur de notre stratégie. Pour cette période, bien que les données chiffrées soient en cours de consolidation, les actions suivantes ont été menées.
+Pour cette période de reporting pilote, les données quantitatives sociales n'ont pas encore été consolidées. Cependant, des actions significatives ont été menées pour renforcer notre engagement envers nos collaborateurs.
 
-Indicateurs de performance clés (KPIs) suivis
-
-   Taux de fréquence et de gravité des accidents du travail (objectif  zéro accident).
-   Heures de formation par employé.
+Indicateurs Clés (à suivre pour les prochains rapports) 
+   Taux de fréquence et de gravité des accidents du travail.
+   Nombre d'heures de formation par salarié.
    Taux de turnover.
-   Indice d'égalité professionnelle.
+   Indice d'égalité salariale FemmesHommes.
 
-Actions notables (JanvierFévrier 2025)
-
-1.  Sécurité  Organisation de "causeries sécurité" hebdomadaires sur le port des Équipements de Protection Individuelle (EPI). Aucun accident avec arrêt n'a été déclaré sur la période.
-2.  Formation  Lancement d'un module de formation en ligne sur notre nouveau code de conduite éthique, suivi par 85 % des collaborateurs concernés.
-3.  Dialogue social  Tenue des réunions mensuelles avec les représentants du personnel pour discuter des conditions de travail et des projets à venir.
+Actions mises en œuvre (janvierfévrier 2025) 
+   Santé et Sécurité  Lancement d'une campagne "zéro accident" avec des ateliers de sensibilisation aux risques sur les postes de travail.
+   Dialogue Social  Organisation de réunions mensuelles avec les représentants du personnel pour discuter des conditions de travail et des projets à venir.
+   Développement des Compétences  Identification des besoins en formation pour l'année 2025 via des entretiens individuels.
 
  Gouvernance
 
-Notre gouvernance RSE est structurée pour assurer que nos engagements sont intégrés à tous les niveaux de l'organisation.
-
-   Pilotage RSE  Un comité RSE, supervisé par la Direction du site, se réunit trimestriellement pour analyser la performance et définir les plans d'action.
-   Éthique des affaires  Notre Code de Conduite, mis à jour en décembre 2024, a été déployé auprès de tous les employés. Il inclut une politique de tolérance zéro envers la corruption.
-   Parties prenantes  Nous maintenons un dialogue ouvert avec nos parties prenantes clés (employés, fournisseurs, autorités locales) pour comprendre leurs attentes et y répondre de manière proactive.
-   Transparence  Ce rapport est une première étape vers une communication plus régulière et transparente sur notre performance extrafinancière.
+Notre gouvernance RSE est supervisée par le Comité de Direction, qui a mandaté un Responsable RSE pour piloter la stratégie de durabilité.
+   Responsabilité  Les objectifs RSE, y compris les cibles de réduction environnementale, sont intégrés dans les évaluations de performance du directeur du site de Casablanca.
+   Éthique  Notre code de conduite, incluant des politiques anticorruption et de respect des droits humains, a été rappelé à l'ensemble des collaborateurs en janvier 2025.
+   Transparence  La mise en place de ce reporting s'inscrit dans notre volonté de renforcer la transparence envers nos parties prenantes, conformément aux exigences de la CSRD.
 
  Alignement avec les Objectifs de Développement Durable (ODD)
 
-Nos actions sur le site de Casablanca contribuent directement à plusieurs ODD des Nations Unies 
-
-   ODD 6 (Eau propre et assainissement)  Par nos efforts continus pour réduire notre consommation d'eau.
-   ODD 7 (Énergie propre et d'un coût abordable)  En améliorant notre efficacité énergétique et en réduisant notre consommation.
-   ODD 8 (Travail décent et croissance économique)  En garantissant un environnement de travail sûr et en investissant dans la formation de nos collaborateurs.
-   ODD 12 (Consommation et production responsables)  Au travers de notre remarquable performance en matière d'efficacité des ressources (énergie, eau) et de réduction des déchets.
+Nos performances et actions sur la période contribuent directement à plusieurs ODD des Nations Unies 
+   ODD 7 (Énergie propre et d'un coût abordable)  Nos efforts pour améliorer notre efficacité énergétique réduisent notre dépendance aux ressources et soutiennent une production plus sobre.
+   ODD 12 (Consommation et production responsables)  La réduction drastique de nos déchets par unité produite et notre meilleure gestion des ressources sont au cœur de cet objectif.
+   ODD 6 (Eau propre et assainissement)  Notre gestion plus efficiente de l'eau contribue à la préservation de cette ressource essentielle.
+   ODD 8 (Travail décent et croissance économique)  En améliorant nos processus, nous assurons la pérennité de notre activité tout en veillant à la sécurité et au bienêtre de nos employés.
 
  Recommandations
 
-Pour capitaliser sur cette dynamique positive, les actions suivantes sont recommandées 
+Sur la base de cette première analyse, les recommandations suivantes sont formulées 
+1.  Environnement  Analyser en détail les causes de la forte réduction des déchets afin de pérenniser et de répliquer ces bonnes pratiques. Fixer des objectifs quantitatifs de réduction pour l'ensemble de l'année 2025.
+2.  Social  Mettre en place de manière urgente un système de collecte fiable et mensuel pour les indicateurs sociaux clés (accidents, formation, etc.) afin de les intégrer au prochain rapport.
+3.  Gouvernance  Formaliser un comité RSE au niveau du site pour assurer un suivi régulier des performances et piloter les plans d'action locaux.
 
-1.  Analyser et Répliquer  Mener une analyse approfondie pour identifier les causes exactes de la forte réduction des déchets en février afin de systématiser ces bonnes pratiques.
-2.  Structurer la Collecte de Données Sociales  Mettre en place un processus de collecte mensuelle fiable pour les KPIs sociaux (heures de formation, taux de fréquence, etc.) afin de les intégrer quantitativement au prochain rapport.
-3.  Fixer des Objectifs Ambitieux  Sur la base de cette performance, établir des objectifs chiffrés pour le prochain semestre en matière de réduction de l'intensité énergétique et hydrique.
-4.  Valorisation Interne  Communiquer activement ces excellents résultats aux équipes de l'usine pour les féliciter et renforcer leur engagement en faveur de la démarche RSE.
+ Conclusion
+
+Ce premier rapport extrafinancier pour le site de Casablanca démontre des progrès remarquables en matière d'efficacité des ressources sur une période de production croissante. Les résultats positifs en matière d'énergie, d'eau et de déchets valident notre stratégie opérationnelle et notre engagement RSE. Le défi pour les mois à venir sera de maintenir cette dynamique, de structurer rigoureusement notre reporting social et de renforcer l'ancrage de la durabilité dans notre gouvernance. Nous sommes convaincus que cette démarche de transparence, guidée par la CSRD, est un levier de performance durable et de confiance pour nos parties prenantes.

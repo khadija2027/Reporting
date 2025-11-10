@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
 from docx import Document
 import google.generativeai as genai
@@ -9,7 +9,7 @@ from django.conf import settings
 import re
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
-from reportlab.pdfgen import canvas
+from reportlab.lib import colors
 import calendar
 from datetime import datetime
 
@@ -22,24 +22,59 @@ def clean_content(text):
         paragraphs = paragraphs[2:]  # garder à partir du 3ème paragraphe
     text = "\n\n".join(paragraphs) 
     text = re.sub(r"\n{3,}", "\n\n", text) 
-    text = re.sub(r"[---]", "", text) 
     text = re.sub(r"[*#_]", "", text) 
-    text = re.sub(r"[|]", "", text)
     text = re.sub(r"[::]", "", text)
+    text = re.sub(r"[---]", "", text)
     return text.strip()
 
-def add_page_number(canvas, doc, logo_path='C:/Users/dell/myproject/media/reports/logo.jpeg'): 
-    canvas.saveState() # Pied de page : numéro de page 
-    page_num = f"Page {doc.page}" 
-    canvas.setFont('Helvetica', 9) 
+def parse_table(section):
+    lines = [l.rstrip() for l in section.split("\n") if l.strip()]
+    # Doit contenir au moins une ligne avec '|' (entête) et une autre ligne
+    if len(lines) < 2 or "|" not in lines[0]:
+        return None
+
+    rows = []
+    for l in lines:
+        # Filtrer les lignes de séparation Markdown (ex: |---|---|---|)
+        if re.match(r"^\s*\|?\s*[-:]+\s*(\|\s*[-:]+\s*)+\|?\s*$", l):
+            continue
+        # Si la ligne n'a pas de | mais est présente, on la considère comme simple texte
+        if "|" not in l:
+            continue
+        parts = [p.strip() for p in l.split("|")]
+        # Enlever éventuels éléments vides générés par | en début/fin
+        # mais garder cellules vides intermédiaires si nécessaire
+        if parts and any(cell != "" for cell in parts):
+            # trim leading/trailing empty cells
+            if parts[0] == "":
+                parts = parts[1:]
+            if parts and parts[-1] == "":
+                parts = parts[:-1]
+            rows.append(parts)
+    if not rows:
+        return None
+    max_cols = max(len(r) for r in rows)
+    normalized = []
+    for r in rows:
+        if len(r) < max_cols:
+            r = r + [""] * (max_cols - len(r))
+        normalized.append(r)
+    return normalized
+
+def add_page_number(canvas, doc, logo_path='C:/Users/dell/myproject/media/reports/logo.jpeg'):
+    canvas.saveState()
+    page_num = f"Page {canvas.getPageNumber()}"
+    canvas.setFont('Helvetica', 9)
     canvas.drawRightString(A4[0] - 2*cm, 1.2*cm, page_num)
     if logo_path and os.path.exists(logo_path):
-        canvas.drawImage(logo_path, 2*cm, A4[1] - 3*cm, width=3*cm, height=2*cm, preserveAspectRatio=True) 
-    canvas.setFont('Helvetica-Bold', 14) 
+        try:
+            canvas.drawImage(logo_path, 2*cm, A4[1] - 3*cm, width=3*cm, height=2*cm, preserveAspectRatio=True)
+        except Exception:
+            pass
     canvas.restoreState()
 
 def get_temp_data():
-    """Jeu de données temporaire (janvier-février 2025)"""
+    """données temporaire (janvier-février 2025)"""
     sites = [{"id": 1, "nom": "Casablanca Plant", "societe": "Innovatech Solutions", "region": "Grand Casablanca"}]
 
     energie = [
@@ -125,17 +160,25 @@ def generate_report(request):
                        - Gouvernance 
                        - Alignement avec les Objectifs de Développement Durable (ODD)
                        - Recommandations
+                       - Conclusion
                 Format : sections avec titres.
                 Données : {data_summary}
                 """
             else:
                 prompt = f"""
-                Rédige un rapport RSE pour les indicateurs {filters}, entre {start_date.strftime('%B %Y')} et {end_date.strftime('%B %Y')}.
+                Rédige un rapport de performance sous forme des tableaux comparatifs pour les indicateurs {filters}, 
+                entre {start_date.strftime('%B %Y')} et {end_date.strftime('%B %Y')}.
+                 Inclut les titres suivants :
+                       -Résumé exécutif (100-150 mots) 
+                       -Performance de Production et Consommation
+                       -Performance RSE
+                       -Conclusion 
                 Données : {data_summary}
                 """
 
             response = model.generate_content(prompt)
-            content = clean_content(response.text.strip())
+            # selon l'API, response peut contenir .text ou .output_text; on garde .text comme auparavant
+            content = clean_content(getattr(response, "text", str(response)).strip())
             if not content:
                 content = "Pas de contenu généré par Gemini."
 
@@ -149,41 +192,85 @@ def generate_report(request):
 
         # --- Styles PDF ---
         styles = getSampleStyleSheet()
-        title_style = ParagraphStyle(name="Title", fontSize=16, leading=18, spaceBefore=12, spaceAfter=12, textColor="#1F4E79", bold=True)
+        title_style = ParagraphStyle(name="Title", fontSize=16, leading=18, spaceBefore=12, spaceAfter=12, textColor="#1F4E79")
         normal_style = styles["Normal"]
 
         # --- Création PDF ---
         pdf_path = os.path.join(output_dir, f"{base_name}.pdf")
         doc = SimpleDocTemplate(pdf_path, pagesize=A4, rightMargin=2*cm, leftMargin=2*cm, topMargin=3*cm, bottomMargin=2*cm)
         elements = []
-        title_keywords = ['résumé exécutif', 'méthodologie', 'section social', 'section environnement','gouvernance', 'alignement avec les objectifs de développement durable (odd)', 'recommandations']
+        title_keywords = [
+            'résumé exécutif', 'méthodologie', 'section social', 'section environnement','performance rse','conclusion',
+            'gouvernance', 'alignement avec les objectifs de développement durable (odd)' ,'performance de production et consommation','recommandations'
+        ]
 
         for sec in content.split("\n\n"):
             sec = sec.strip()
             if not sec:
                 continue
+
+            table_data = parse_table(sec)
+            if table_data:
+                # Style du tableau : header si présent
+                t = Table(table_data, hAlign='LEFT')
+                # si on a au moins 2 lignes, traiter la première comme en-tête
+                has_header = len(table_data) >= 1
+                ts = TableStyle([
+                    ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+                    ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                    ('LEFTPADDING', (0,0), (-1,-1), 6),
+                    ('RIGHTPADDING', (0,0), (-1,-1), 6),
+                ])
+                if has_header:
+                    ts.add('BACKGROUND', (0, 0), (-1, 0), colors.lightblue)
+                    ts.add('TEXTCOLOR', (0, 0), (-1, 0), colors.black)
+                    ts.add('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold')
+                t.setStyle(ts)
+                elements.append(t)
+                elements.append(Spacer(1, 12))
+                continue
+
+            # titres
             if any(sec.lower().startswith(k) for k in title_keywords):
                 elements.append(Paragraph(sec, title_style))
             else:
                 elements.append(Paragraph(sec, normal_style))
             elements.append(Spacer(1, 12))
 
-        doc.build(elements, onFirstPage=lambda c,d: add_page_number(c,d),
-                  onLaterPages=lambda c,d: add_page_number(c,d))
+        # build PDF (callbacks pour pagination)
+        doc.build(elements, onFirstPage=add_page_number, onLaterPages=add_page_number)
 
-
-        # --- Création Word ---
+        # --- Création Word (.docx) ---
         word_path = os.path.join(output_dir, f"{base_name}.docx")
         document = Document()
-        for line in content.split("\n\n"):
-            line_strip = line.strip()
+        for block in content.split("\n\n"):
+            line_strip = block.strip()
             if not line_strip:
                 continue
+            table_data = parse_table(line_strip)
+            if table_data:
+                table = document.add_table(rows=len(table_data), cols=len(table_data[0]))
+                for i, row in enumerate(table_data):
+                    for j, cell_text in enumerate(row):
+                        cell = table.cell(i, j)
+                        cell.text = cell_text
+                        # mettre le header en gras
+                        if i == 0:
+                            for paragraph in cell.paragraphs:
+                                for run in paragraph.runs:
+                                    run.font.bold = True
+                # ajouter un paragraphe vide après le tableau
+                document.add_paragraph()
+                continue
+
             if any(line_strip.lower().startswith(k) for k in title_keywords):
                 document.add_heading(line_strip, level=2)
             else:
                 document.add_paragraph(line_strip, style="Normal")
+
         document.save(word_path)
+
         # --- Création TXT ---
         txt_path = os.path.join(output_dir, f"{base_name}.txt")
         with open(txt_path, "w", encoding="utf-8") as f:

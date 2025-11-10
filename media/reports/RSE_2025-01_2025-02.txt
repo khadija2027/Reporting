@@ -1,0 +1,69 @@
+Rapport RSE  Analyse des Indicateurs de Déchets
+
+Période  Janvier - Février 2025
+Site  Usine de Casablanca
+Date de rédaction  28 Février 2025
+Auteur  [Votre Nom/Département RSE]
+
+---
+
+ 1. Introduction et Contexte
+
+Le présent rapport s'inscrit dans notre démarche de Responsabilité Sociétale des Entreprises (RSE) et notre engagement continu pour la réduction de notre empreinte environnementale. L'objectif est d'analyser l'évolution de notre production de déchets sur le site de Casablanca pour les mois de janvier et février 2025, d'identifier les tendances et de définir les actions futures.
+
+La gestion des déchets est un pilier de notre stratégie de développement durable, visant à optimiser l'utilisation des ressources et à promouvoir l'économie circulaire.
+
+ 2. Synthèse des Données Clés (Janvier - Février 2025)
+
+Le tableau ci-dessous présente les données de performance pour la période concernée. Bien que ce rapport se concentre sur les déchets, les indicateurs d'énergie, d'eau et de production sont inclus pour fournir un contexte opérationnel complet.
+
+| Indicateur | Unité | Janvier 2025 | Février 2025 | Évolution |
+| --- | --- | --- | --- | --- |
+| Production | kg | 26 500 | 28 000 | +5,7% |
+| Déchets générés| kg | 480 | 320 | -33,3% |
+| Énergie consommée | kWh | 15 800 | 15 000 | -5,1% |
+| Eau consommée | m³ | 3 500 | 3 400 | -2,9% |
+
+ 3. Analyse des Performances (Déchets)
+
+3.1. Réduction en valeur absolue
+
+Une réduction très significative de la quantité de déchets générés a été observée entre janvier et février. Les déchets sont passés de 480 kg à 320 kg, soit une diminution nette de 160 kg (-33,3%).
+
+Cette performance est d'autant plus remarquable qu'elle a été réalisée dans un contexte de hausse de la production de +5,7% sur la même période.
+
+3.2. Analyse de l'intensité déchets
+
+Pour une analyse plus fine de notre efficacité, nous calculons le ratio de déchets par unité de production. Cet indicateur clé mesure la quantité de déchets générée pour chaque tonne de produit fabriqué.
+
+   Ratio de déchets (Janvier 2025) 
+    (480 kg déchets / 26,5 tonnes de production) = 18,1 kg de déchets / tonne produite
+
+   Ratio de déchets (Février 2025) 
+    (320 kg déchets / 28 tonnes de production) = 11,4 kg de déchets / tonne produite
+
+Conclusion de l'analyse 
+L'intensité déchets a connu une baisse spectaculaire, passant de 18,1 à 11,4 kg/tonne. Cela démontre une amélioration significative de l'efficacité de nos processus de production et de nos pratiques de gestion des matières premières. Nous avons réussi à produire plus tout en générant beaucoup moins de déchets.
+
+ 4. Interprétation et Facteurs Contributifs (Hypothèses)
+
+Cette excellente performance peut être attribuée à plusieurs facteurs potentiels qui devront être confirmés 
+   Optimisation des processus  Mise en place de nouvelles procédures visant à réduire les chutes de matières premières.
+   Sensibilisation des équipes  Succès des campagnes de communication interne sur les bonnes pratiques de tri et de réduction à la source.
+   Amélioration du tri sélectif  Un meilleur tri a pu permettre de revaloriser certaines matières qui étaient auparavant considérées comme des déchets ultimes.
+   Maintenance préventive  Des équipements mieux réglés peuvent entraîner moins de rebuts de production.
+
+ 5. Recommandations et Prochaines Étapes
+
+Afin de pérenniser et d'amplifier ces résultats positifs, les actions suivantes sont recommandées 
+
+1.  Analyser les causes profondes  Mener une investigation sur le terrain avec les équipes de production pour identifier précisément les initiatives qui ont conduit à cette réduction.
+2.  Standardiser les bonnes pratiques  Documenter et formaliser les nouvelles procédures ou les comportements ayant contribué à ce succès pour en faire le nouveau standard opérationnel.
+3.  Fixer des objectifs ambitieux  Sur la base de la performance de février (11,4 kg/tonne), définir un nouvel objectif pour le premier trimestre 2025 afin de maintenir la dynamique.
+4.  Communication interne  Célébrer ce succès avec les équipes impliquées pour renforcer leur engagement et valoriser leurs efforts.
+
+ 6. Conclusion Générale
+
+La période de janvier-février 2025 démontre un progrès exceptionnel dans notre gestion des déchets sur le site de Casablanca. La réduction de 33,3% des déchets en valeur absolue, couplée à une augmentation de la production, témoigne d'une réelle avancée en matière d'efficacité et de conscience environnementale.
+
+Nous devons capitaliser sur cette dynamique pour ancrer durablement ces bonnes pratiques et continuer notre progression vers l'excellence opérationnelle et environnementale.

@@ -1,0 +1,39 @@
+Rapport de Performance de Production – Usine de Casablanca
+Période  Janvier 2025 vs. Février 2025
+
+
+
+ Résumé exécutif
+
+Le présent rapport analyse la performance de l'usine de Casablanca en comparant les données de janvier et février 2025. Le mois de février a démontré une amélioration notable de l'efficacité opérationnelle sur tous les plans. La production a connu une croissance significative de +5,7 %, passant de 26 500 kg à 28 000 kg. Cette augmentation a été réalisée tout en optimisant la consommation des ressources  une baisse de 5,1 % de l'énergie et de 2,9 % de l'eau a été enregistrée. Le progrès le plus marquant concerne la gestion environnementale, avec une réduction spectaculaire de 33,3 % des déchets générés. Ces résultats témoignent d'une gestion optimisée des processus de production et d'un engagement renforcé envers nos objectifs de durabilité, positionnant février comme un mois de référence pour la performance globale.
+
+
+
+ Performance de Production et Consommation
+
+Ce tableau détaille les indicateurs clés liés à la production et à la consommation des ressources essentielles.
+
+| Indicateur | Janvier 2025 | Février 2025 | Évolution | Commentaire |
+|  |  |  |  |  |
+| Production totale (kg) | 26 500 | 28 000 | +1 500 kg (+5,7 %) | Croissance robuste de la production, dépassant les objectifs. |
+| Consommation d'énergie (kWh) | 15 800 | 15 000 | 800 kWh (5,1 %) | Baisse notable malgré l'augmentation de la production, signe d'une meilleure efficacité énergétique. |
+| Consommation d'eau (m³) | 3 500 | 3 400 | 100 m³ (2,9 %) | Optimisation réussie de l'utilisation de l'eau dans les processus. |
+
+
+
+ Performance RSE (Responsabilité Sociale des Entreprises)
+
+Ce tableau se concentre sur les indicateurs environnementaux, reflétant l'engagement de l'usine en matière de RSE.
+
+| Indicateur | Janvier 2025 | Février 2025 | Évolution | Commentaire |
+|  |  |  |  |  |
+| Déchets générés (kg) | 480 | 320 | 160 kg (33,3 %) | Réduction très significative, indiquant une amélioration majeure dans la gestion des rebuts et l'optimisation des matières premières. |
+| Ratio Déchets/Production (g/kg) | 18,1 g/kg | 11,4 g/kg | 6,7 g/kg (37 %) | Cet indicateur clé montre une forte amélioration de l'efficacité des processus  moins de déchets sont générés pour chaque kilogramme produit. |
+
+
+
+ Conclusion
+
+Le mois de février 2025 marque une progression remarquable pour l'usine de Casablanca. L'entreprise a non seulement réussi à augmenter sa production, mais l'a fait en réduisant son empreinte environnementale et ses coûts opérationnels. La diminution simultanée de la consommation d'énergie, d'eau et des déchets générés, alors que la production augmentait, illustre une optimisation réussie et une performance globale exceptionnelle.
+
+Il est crucial d'analyser les initiatives et les ajustements opérationnels mis en place en février afin de les systématiser. Maintenir cette dynamique positive sera la clé pour atteindre nos objectifs annuels de rentabilité et de développement durable.
